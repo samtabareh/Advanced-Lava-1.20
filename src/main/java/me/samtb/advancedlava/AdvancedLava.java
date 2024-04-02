@@ -1,5 +1,6 @@
 package me.samtb.advancedlava;
 
+import me.samtb.advancedlava.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +11,6 @@ public class AdvancedLava implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		ModItems.registerModItems();
 	}
 }
