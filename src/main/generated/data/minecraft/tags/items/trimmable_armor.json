@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "advancedlava:graphite_helmet",
+    "advancedlava:graphite_chestplate",
+    "advancedlava:graphite_leggings",
+    "advancedlava:graphite_boots",
+    "advancedlava:netherite_graphite_helmet",
+    "advancedlava:netherite_graphite_chestplate",
+    "advancedlava:netherite_graphite_leggings",
+    "advancedlava:netherite_graphite_boots"
+  ]
+}

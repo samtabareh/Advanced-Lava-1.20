@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "G": {
+      "item": "advancedlava:graphite"
+    }
+  },
+  "pattern": [
+    "GDG",
+    "D D",
+    "G G"
+  ],
+  "result": {
+    "item": "advancedlava:graphite_leggings"
+  },
+  "show_notification": true
+}

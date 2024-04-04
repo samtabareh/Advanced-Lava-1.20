@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "G": {
+      "item": "advancedlava:graphite"
+    }
+  },
+  "pattern": [
+    "GDG",
+    "G G",
+    "   "
+  ],
+  "result": {
+    "item": "advancedlava:graphite_helmet"
+  },
+  "show_notification": true
+}

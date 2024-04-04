@@ -1,0 +1,37 @@
+{
+  "criteria": {
+    "graphite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedlava:graphite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Acquire Graphite"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "advancedlava:graphite"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Black Diamonds!"
+    }
+  },
+  "requirements": [
+    [
+      "graphite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

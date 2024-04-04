@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "advancedlava:graphite_ore",
+    "advancedlava:deepslate_graphite_ore",
+    "advancedlava:nether_graphite_ore"
+  ]
+}

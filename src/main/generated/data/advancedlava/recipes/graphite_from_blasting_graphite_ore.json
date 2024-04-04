@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 150,
+  "experience": 0.7,
+  "group": "graphite",
+  "ingredient": {
+    "item": "advancedlava:graphite_ore"
+  },
+  "result": "advancedlava:graphite"
+}

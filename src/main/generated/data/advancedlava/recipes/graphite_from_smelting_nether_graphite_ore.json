@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 0.7,
+  "group": "graphite",
+  "ingredient": {
+    "item": "advancedlava:nether_graphite_ore"
+  },
+  "result": "advancedlava:graphite"
+}

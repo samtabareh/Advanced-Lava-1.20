@@ -1,3 +1,20 @@
 {
-  "item.advancedlava.graphite": "Graphite"
+  "effect.advancedlava.melt": "Melting",
+  "death.attack.melt": "%1$s melted from the heat",
+
+  "item.advancedlava.graphite": "Graphite",
+
+  "item.advancedlava.graphite_helmet": "Graphite Helmet",
+  "item.advancedlava.graphite_chestplate": "Graphite Chestplate",
+  "item.advancedlava.graphite_leggings": "Graphite Leggings",
+  "item.advancedlava.graphite_boots": "Graphite Boots",
+
+  "item.advancedlava.netherite_graphite_helmet": "Netherite Graphite Helmet",
+  "item.advancedlava.netherite_graphite_chestplate": "Netherite Graphite Chestplate",
+  "item.advancedlava.netherite_graphite_leggings": "Netherite Graphite Leggings",
+  "item.advancedlava.netherite_graphite_boots": "Netherite Graphite Boots",
+
+  "block.advancedlava.graphite_ore": "Graphite Ore",
+  "block.advancedlava.deepslate_graphite_ore": "Deepslate Graphite Ore",
+  "block.advancedlava.nether_graphite_ore": "Nether Graphite Ore"
 }

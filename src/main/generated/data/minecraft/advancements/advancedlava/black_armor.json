@@ -1,0 +1,78 @@
+{
+  "parent": "minecraft:advancedlava/black_diamond",
+  "criteria": {
+    "graphite_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedlava:graphite_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "graphite_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedlava:graphite_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "graphite_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedlava:graphite_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "graphite_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedlava:graphite_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Get Graphite armor"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "advancedlava:graphite_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Cover Me in Carbon"
+    }
+  },
+  "requirements": [
+    [
+      "graphite_helmet",
+      "graphite_chestplate",
+      "graphite_leggings",
+      "graphite_boots"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
