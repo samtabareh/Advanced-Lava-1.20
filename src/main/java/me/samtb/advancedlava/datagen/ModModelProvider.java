@@ -26,6 +26,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.GRAPHITE, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.GRAPHITE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
+
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.GRAPHITE_HELMET));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.GRAPHITE_CHESTPLATE));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.GRAPHITE_LEGGINGS));

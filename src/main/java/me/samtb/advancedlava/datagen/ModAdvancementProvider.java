@@ -1,5 +1,6 @@
 package me.samtb.advancedlava.datagen;
 
+import me.samtb.advancedlava.block.ModBlocks;
 import me.samtb.advancedlava.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
@@ -7,6 +8,7 @@ import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementFrame;
 import net.minecraft.advancement.AdvancementRewards;
 import net.minecraft.advancement.CriterionMerger;
+import net.minecraft.advancement.criterion.EnchantedItemCriterion;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.data.server.advancement.vanilla.VanillaStoryTabAdvancementGenerator;
 import net.minecraft.text.Text;
@@ -20,6 +22,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
 	}
 
 	@Override
+
 	public void generateAdvancement(Consumer<Advancement> consumer) {
 		Advancement graphiteItemAdvancement = Advancement.Builder.create()
 				.display(

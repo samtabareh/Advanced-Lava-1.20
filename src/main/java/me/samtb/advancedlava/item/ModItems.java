@@ -2,21 +2,24 @@ package me.samtb.advancedlava.item;
 
 import me.samtb.advancedlava.AdvancedLava;
 import me.samtb.advancedlava.block.ModBlocks;
-import me.samtb.advancedlava.util.ModTags;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.*;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-
-import java.util.List;
+import net.minecraft.util.Rarity;
 
 public class ModItems {
 
     public static final Item GRAPHITE = registerItem("graphite", new Item(new FabricItemSettings()));
+
+    public static final Item GRAPHITE_UPGRADE_SMITHING_TEMPLATE = registerItem("graphite_upgrade_smithing_template", GraphiteUpgradeSmithingTemplate.createGraphiteUpgrade());
 
     // Graphite Armor
     public static final Item GRAPHITE_HELMET = registerItem("graphite_helmet",
@@ -30,16 +33,18 @@ public class ModItems {
 
     // Netherite Graphite Armor
     public static final Item NETHERITE_GRAPHITE_HELMET = registerItem("netherite_graphite_helmet",
-            new ArmorItem(ModArmorMaterials.NETHERITE_GRAPHITE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof()));
+            new ArmorItem(ModArmorMaterials.NETHERITE_GRAPHITE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
     public static final Item NETHERITE_GRAPHITE_CHESTPLATE = registerItem("netherite_graphite_chestplate",
-            new ArmorItem(ModArmorMaterials.NETHERITE_GRAPHITE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof()));
+            new ArmorItem(ModArmorMaterials.NETHERITE_GRAPHITE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
     public static final Item NETHERITE_GRAPHITE_LEGGINGS = registerItem("netherite_graphite_leggings",
-            new ArmorItem(ModArmorMaterials.NETHERITE_GRAPHITE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof()));
+            new ArmorItem(ModArmorMaterials.NETHERITE_GRAPHITE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
     public static final Item NETHERITE_GRAPHITE_BOOTS = registerItem("netherite_graphite_boots",
-            new ArmorItem(ModArmorMaterials.NETHERITE_GRAPHITE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof()));
+            new ArmorItem(ModArmorMaterials.NETHERITE_GRAPHITE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof().rarity(Rarity.EPIC)));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.addAfter(Items.DIAMOND, GRAPHITE);
+
+        entries.addBefore(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, GRAPHITE_UPGRADE_SMITHING_TEMPLATE);
     }
 
     private static void addItemsToNaturalBlocksItemGroup(FabricItemGroupEntries entries) {

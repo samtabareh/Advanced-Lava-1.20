@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "advancedlava:item/graphite_upgrade_smithing_template"
+  }
+}

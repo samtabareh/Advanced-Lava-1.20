@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "advancedlava:graphite"
+  },
+  "base": {
+    "item": "minecraft:diamond_chestplate"
+  },
+  "result": {
+    "item": "advancedlava:graphite_chestplate"
+  },
+  "template": {
+    "item": "advancedlava:graphite_upgrade_smithing_template"
+  }
+}
