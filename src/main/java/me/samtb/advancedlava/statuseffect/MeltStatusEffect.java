@@ -20,7 +20,7 @@ public class MeltStatusEffect extends StatusEffect {
 	@Override
 	public void applyUpdateEffect(LivingEntity entity, int amplifier) {
 		if (entity instanceof PlayerEntity player) {
-			player.damage(ModDamageTypes.of(player.getWorld(), ModDamageTypes.MELT), 2 << amplifier);
+			player.damage(ModDamageTypes.of(player.getWorld(), ModDamageTypes.MELT), 1.5f + amplifier);
 			// << shifts the numbers bits to the left by amplifier
 		}
 	}

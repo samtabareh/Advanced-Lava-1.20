@@ -27,7 +27,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     }
 
     public static void offerGraphiteUpgradeRecipe(Consumer<RecipeJsonProvider> exporter, Item input, RecipeCategory category, Item result) {
-        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.GRAPHITE_UPGRADE_SMITHING_TEMPLATE), Ingredient.ofItems(input), Ingredient.ofItems(ModItems.GRAPHITE), category, result).criterion("graphite", RecipeProvider.conditionsFromItem(ModItems.GRAPHITE)).offerTo(exporter, RecipeProvider.getItemPath(result) + "_smithing");
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.GRAPHITE_UPGRADE_SMITHING_TEMPLATE), Ingredient.ofItems(input), Ingredient.ofItems(ModItems.GRAPHITE), category, result)
+                .criterion("graphite", RecipeProvider.conditionsFromItem(ModItems.GRAPHITE))
+                .offerTo(exporter, RecipeProvider.getItemPath(result) + "_smithing");
     }
 
     @Override
@@ -36,6 +38,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 0.7f, 300, "graphite");
         offerBlasting(exporter, GRAPHITE_SMELTABLES, RecipeCategory.MISC, ModItems.GRAPHITE,
                 0.7f, 150, "graphite");
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GRAPHITE_UPGRADE_SMITHING_TEMPLATE, 2)
+                .pattern("###")
+                .pattern("#C#")
+                .pattern("###")
+                .input('#', Items.COAL_BLOCK)
+                .input('C', ModItems.GRAPHITE)
+                .criterion(RecipeProvider.hasItem(ModItems.GRAPHITE), RecipeProvider.conditionsFromItem(ModItems.GRAPHITE))
+                .offerTo(exporter);
 
         offerGraphiteUpgradeRecipe(exporter, Items.DIAMOND_HELMET, RecipeCategory.COMBAT, ModItems.GRAPHITE_HELMET);
         offerGraphiteUpgradeRecipe(exporter, Items.DIAMOND_CHESTPLATE, RecipeCategory.COMBAT, ModItems.GRAPHITE_CHESTPLATE);

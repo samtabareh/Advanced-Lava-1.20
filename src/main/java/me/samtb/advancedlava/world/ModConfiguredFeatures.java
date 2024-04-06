@@ -18,6 +18,7 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> GRAPHITE_ORE_KEY = registerKey("graphite_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> GRAPHITE_ORE_LOWER_KEY = registerKey("graphite_ore_lower");
     public static final RegistryKey<ConfiguredFeature<?, ?>> NETHER_GRAPHITE_ORE_KEY = registerKey("nether_graphite_ore");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
@@ -32,8 +33,9 @@ public class ModConfiguredFeatures {
         List<OreFeatureConfig.Target> netherGraphiteOres =
                 List.of(OreFeatureConfig.createTarget(netherReplacables, ModBlocks.NETHER_GRAPHITE_ORE.getDefaultState()));
 
-        register(context, GRAPHITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldGraphiteOres, 12 /* Max Blocks per vain */, 0.25f));
-        register(context, NETHER_GRAPHITE_ORE_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(netherGraphiteOres, 8 /* Max Blocks per vain */, 1f));
+        register(context, GRAPHITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldGraphiteOres, 2 /* Max Blocks per vain */, 0.25f));
+        register(context, GRAPHITE_ORE_LOWER_KEY, Feature.ORE, new OreFeatureConfig(overworldGraphiteOres, 4, 0.5f));
+        register(context, NETHER_GRAPHITE_ORE_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(netherGraphiteOres, 8, 0.75f));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

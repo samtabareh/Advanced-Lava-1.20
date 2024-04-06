@@ -25,8 +25,9 @@ public abstract class PlayerEntityMixin {
     private void tickMovement(CallbackInfo ci) {
         PlayerEntity player = (PlayerEntity) (Object) this;
         World world = player.getWorld();
+        boolean wearingGraphite = true;
+        boolean wearingAnyGraphite = false;
         if (world.getRegistryKey() == World.NETHER) {
-            boolean wearingGraphite = true;
 
             for (ItemStack itemStack : player.getArmorItems()) {
                 if (itemStack.getItem() == Items.AIR) {
@@ -37,27 +38,18 @@ public abstract class PlayerEntityMixin {
                 ArmorMaterial mat = armorItem.getMaterial();
                 if (mat != ModArmorMaterials.GRAPHITE &&
                     mat != ModArmorMaterials.NETHERITE_GRAPHITE) wearingGraphite = false;
+                else wearingAnyGraphite = true;
             }
             if (!wearingGraphite) player.addStatusEffect(new StatusEffectInstance(ModStatusEffects.MELT, 1));
         }
 
         int r = 10;
         BlockPos blockPos = player.getBlockPos();
+        boolean finalWearingAnyGraphite = wearingAnyGraphite;
         BlockPos.findClosest(blockPos, r, 3, pos -> world.getFluidState(pos).isIn(FluidTags.LAVA)).ifPresent(pos -> {
             float distance = blockPos.getManhattanDistance(pos) / 3f;
-            float dmg = 0f;
-            for (ItemStack itemStack : player.getArmorItems()) {
-                if (itemStack.getItem() == Items.AIR) {
-                    dmg += 0.5f;
-                    continue;
-                }
-                ArmorItem armorItem = (ArmorItem) itemStack.getItem();
-                ArmorMaterial mat = armorItem.getMaterial();
-                if (mat != ModArmorMaterials.GRAPHITE &&
-                    mat != ModArmorMaterials.NETHERITE_GRAPHITE) dmg += MathHelper.clamp((1f / mat.getProtection(armorItem.getType()) * 10f), 0.5f, 3.5f);
-            }
-            if (dmg != 0f) {
-                player.addStatusEffect(new StatusEffectInstance(ModStatusEffects.MELT, 1, Math.round(1f / (distance + dmg))));
+            if (!finalWearingAnyGraphite) {
+                player.addStatusEffect(new StatusEffectInstance(ModStatusEffects.MELT, 1, Math.round(1f / distance)));
             }
         });
     }

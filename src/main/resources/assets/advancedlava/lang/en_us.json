@@ -3,14 +3,12 @@
   "death.attack.melt": "%1$s melted from the heat",
 
   "item.advancedlava.graphite": "Graphite",
-  
-  "item.advancedlava.graphite_upgrade_smithing_template": "Graphite ",
-  
-  "item.advancedlava.smithing_template.graphite_upgrade.additions_slot_description": "Add Graphite",
-  "item.advancedlava.smithing_template.graphite_upgrade.applies_to": "Diamond Equipment",
-  "item.advancedlava.smithing_template.graphite_upgrade.base_slot_description": "Add diamond armor",
-  "item.advancedlava.smithing_template.graphite_upgrade.ingredients": "Graphite",
-  "upgrade.advancedlava.graphite_upgrade": "Graphite Upgrade",
+
+  "item.minecraft.smithing_template.graphite_upgrade.additions_slot_description": "Add Graphite",
+  "item.minecraft.smithing_template.graphite_upgrade.applies_to": "Diamond Equipment",
+  "item.minecraft.smithing_template.graphite_upgrade.base_slot_description": "Add diamond armor",
+  "item.minecraft.smithing_template.graphite_upgrade.ingredients": "Graphite",
+  "upgrade.minecraft.graphite_upgrade": "Graphite Upgrade",
 
   "item.advancedlava.graphite_helmet": "Graphite Helmet",
   "item.advancedlava.graphite_chestplate": "Graphite Chestplate",

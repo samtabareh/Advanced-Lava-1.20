@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:coal_block"
+    },
+    "C": {
+      "item": "advancedlava:graphite"
+    }
+  },
+  "pattern": [
+    "###",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "item": "advancedlava:graphite_upgrade_smithing_template"
+  },
+  "show_notification": true
+}

@@ -24,14 +24,14 @@ public class ModPlacedFeatures {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, GRAPHITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.GRAPHITE_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(3, // Veins per Chunk
+                ModOrePlacement.modifiersWithCount(2, // Veins per Chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(10))));
-        register(context, GRAPHITE_ORE_LOWER_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.GRAPHITE_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(5, // Veins per Chunk
+        register(context, GRAPHITE_ORE_LOWER_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.GRAPHITE_ORE_LOWER_KEY),
+                ModOrePlacement.modifiersWithCount(4, // Veins per Chunk
                         HeightRangePlacementModifier.trapezoid(YOffset.getBottom(), YOffset.fixed(0))));
 
         register(context, NETHER_GRAPHITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.NETHER_GRAPHITE_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(12, // Veins per Chunk
+                ModOrePlacement.modifiersWithCount(8, // Veins per Chunk
                         HeightRangePlacementModifier.trapezoid(YOffset.getBottom(), YOffset.getTop())));
     }
 
