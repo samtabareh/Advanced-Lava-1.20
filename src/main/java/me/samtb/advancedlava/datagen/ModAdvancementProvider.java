@@ -29,7 +29,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
 						ModItems.GRAPHITE, // The display icon
 						Text.literal("Black Diamonds!"), // The title
 						Text.literal("Acquire Graphite"), // The description
-						null, // Background image used
+						new Identifier("textures/gui/advancements/backgrounds/nether.png"), // Background image used
 						AdvancementFrame.TASK, // Options: TASK, CHALLENGE, GOAL
 						true, // Show toast top right
 						true, // Announce to chat
