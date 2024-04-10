@@ -3,7 +3,7 @@
 	"id": "advancedlava",
 	"version": "${version}",
 	"name": "Advanced Lava",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Have fun... while burning!",
 	"authors": [
 		"S4m Gamer D34D"
 	],
@@ -35,5 +35,10 @@
 	},
 	"suggests": {
 		"another-mod": "*"
+	},
+	"custom": {
+		"loom:injected_interfaces": {
+			"net/minecraft/class_3616": ["me/samtb/advancedlava/util/LavaFluidProperties"]
+		}
 	}
 }
